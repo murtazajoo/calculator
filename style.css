@@ -1,0 +1,94 @@
+body{
+    background-color:#333;
+    height: 100vh;
+overflow: hidden;
+width: 100%;
+display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    
+}
+.grid{
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center; 
+    background-color: rgb(29, 32, 37);
+    padding: 10px;    
+    margin: 0 auto;
+    box-shadow: 0 0 10px 5px rgb(87, 87, 87);
+}
+
+.grid2{
+
+padding-top: 30px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+button{
+    border-radius: 50%;
+
+    background-color: #333;
+    border: 1px solid grey ;
+    min-width: 70px;
+    height: 70px;
+    color: grey;
+    /* border-radius: 50%; */
+    transition: 500ms;
+}
+#inputfield:hover{
+transform: scale3d(1.1,1.1,1.1);
+}
+#inputfield{
+    overflow-x: hidden;
+    transition: 1s;
+    border-radius: 10px;
+    cursor: text;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: rgb(202, 202, 202);
+    text-align: left;
+    box-shadow: 0 0 10px 3px #333;
+
+    width: fit-content;
+    min-width: calc(70px * 4);
+    height: 50px;
+    background-color: #333;
+    border: 1px solid grey;
+    padding: 20px;
+}
+
+button:hover{
+    
+    /* font-size: 20px; */
+    transform: scale3d(1.1,1.1,1.1);
+    /* color: rgb(214, 209, 209); */
+    /* background-color: rgb(59, 59, 59); */
+    box-shadow: 0 0 10px 3px #333;
+
+}
+
+
+.ora{
+    background-color: rgba(255, 68, 0, 0.568);
+    color: white;
+
+}
+.white{
+    background-color: whitesmoke;
+    color: #333;
+    font-size: 25px;
+
+}
+
+.sci{
+    background-color: grey; 
+    color: #333;
+    border: 1px solid rgba(51, 51, 51, 0.514);
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid">
+        <div  id="inputfield"></div>
+<div class="grid2">
+<button class="sci" onclick="clearfiled()" >AC</button>
+<button class="sci" onclick="clearone()" >C</button>
+<button class="sci" onclick="change(3.14)" >pi</button>
+<button class="ora" onclick="change('/')" >/</button>
+<button  onclick="change(1)" >1</button>
+<button  onclick="change(2)" >2</button>
+<button  onclick="change(3)" >3</button>
+<button class="ora" onclick="change('-')" >-</button>
+<button  onclick="change(4)" >4</button>
+<button  onclick="change(5)" >5</button>
+<button  onclick="change(6)" >6</button>
+<button class="ora" onclick="change('+')" >+</button>
+<button  onclick="change(7)" >7</button>
+<button  onclick="change(8)" >8</button>
+<button  onclick="change(9)" >9</button>
+
+<button class="ora" onclick="change('*')" >x</button>
+<button  class="sci" onclick="change('%')" >Remain <br> der</button>
+<button  onclick="change(0)" >0</button>
+<button class="sci" style="font-size: 30px;"  onclick="change('.')" >.</button>
+<button class="white"  onclick="equal()" id="equal">=</button>
+</div>
+    </div>
+<script>
+let inputfield =  document.getElementById("inputfield")
+
+const change = num => 
+
+inputfield.textContent += num
+
+
+
+function equal(){
+    const i =inputfield.textContent.substring(0,1)
+    if(i === '*' || i === '-' || i === '+' || i === '/' || i === '%' ){
+        inputfield.textContent= "Incorrect Syntax"
+        inputfield.style.color="rgb(182, 65, 65)"
+        inputfield.style.fontFamily="Monospace"
+
+    }
+    else {
+        inputfield.textContent = eval(inputfield.textContent)
+
+    }
+}
+function clearfiled(){
+    inputfield.textContent=""
+    inputfield.style.color="white"
+
+
+}
+
+function clearone(){
+    inputfield.style.color="white"
+
+    inputfield.textContent= inputfield.textContent.substring(0,inputfield.textContent.length-1)
+    
+}
+ </script>
+
+
+
+</body>
+</html>
